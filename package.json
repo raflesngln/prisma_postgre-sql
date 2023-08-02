@@ -1,0 +1,24 @@
+{
+  "name": "prisma-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
+    "db:push": "npx prisma db push",
+    "insert": "npx ts-node my-query/users/Create.ts && npx ts-node my-query/posts/Create.ts ",
+    "query": "npx ts-node my-query/users/Get.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "prisma": "^5.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.1.0"
+  }
+}
